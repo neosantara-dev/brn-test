@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRN</title>
+    <style>
+        form {
+            width: 50vh;
+            display: flex;
+            flex-direction: column;
+        }
+        form input {
+            margin: 5px 0 5px 0;
+        }
+        form button {
+            width: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Lupa Kata Sandi</h3>
+        <form id="form-POSTapi-forgot-password" data-method="POST" data-path="api/forgot-password" data-authed="0" data-hasfiles="0" data-headers="{&quot;Accept&quot;:&quot;application\/json&quot;,&quot;Content-Type&quot;:&quot;application\/json&quot;}" onsubmit="event.preventDefault(); executeTryOut('POSTapi-forgot-password', this);">
+            <input type="text" name="email" data-endpoint="POSTapi-forgot-password" data-component="body" required="" placeholder="email">
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRN</title>
+    <style>
+        form {
+            width: 50vh;
+            display: flex;
+            flex-direction: column;
+        }
+        form input {
+            margin: 5px 0 5px 0;
+        }
+        form button {
+            width: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Data Profile</h3>                                
+        <form id="form-GETapi-profile" data-method="GET" data-path="api/profile" data-authed="1" data-hasfiles="0" data-headers="{&quot;Authorization&quot;:&quot;Bearer {YOUR_AUTH_KEY}&quot;,&quot;Accept&quot;:&quot;application\/json&quot;}" onsubmit="event.preventDefault(); executeTryOut('GETapi-profile', this);">    
+            <input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GETapi-profile" data-component="header" placeholder="Authorization">
+            <input type="text" name="include" data-endpoint="GETapi-profile" data-component="query" placeholder="Include">
+            <!-- 
+                Include akan memuat data dengan relasi, relasi yang tersedia: 
+                #1 roles : Mendapatkan informasi wewenang pengguna 
+                #2 addresses: Alamat yang didaftarkan. 
+                #3 personal-information : Informasi pribadi.     
+            -->
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+</body>
+</html>
